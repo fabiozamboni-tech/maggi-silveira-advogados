@@ -33,10 +33,10 @@ export function About() {
           </div>
           <div
             data-reveal
-            className="relative -mt-16 ml-auto mr-4 max-w-xs rounded-xl border border-brass/35 bg-[#122127] p-6 text-foreground shadow-2xl shadow-black/50 md:-mt-24 md:mr-[-2rem]"
+            className="relative -mt-16 ml-auto mr-4 max-w-xs rounded-xl border border-brass/40 bg-basalt p-6 text-[#fbf9f5] shadow-2xl shadow-basalt/30 md:-mt-24 md:mr-[-2rem]"
           >
             <p className="font-serif text-xl leading-snug">
-              <span className="text-brass">No coração de Torres/RS</span>, atendendo o Litoral Norte e a Serra Gaúcha.
+              <span className="text-brass-light font-medium">No coração de Torres/RS</span>, atendendo o Litoral Norte e a Serra Gaúcha.
             </p>
           </div>
         </div>

@@ -12,8 +12,6 @@
   --color-brass-light: var(--brass-light);
   --color-basalt: var(--basalt);
   --color-fog: var(--fog);
-  --color-warm-beige: var(--warm-beige);
-  --color-warm-beige-foreground: var(--warm-beige-foreground);
 
   --color-ring: var(--ring);
   --color-input: var(--input);
@@ -42,33 +40,31 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* Paleta refinada: Basalto executivo nobre, dourado latão e bege champanhe clássico */
+/* Paleta nobre: Tons de areia quente, branco sujo, linho, basalto profundo e latão dourado */
 :root {
-  color-scheme: dark;
-  --basalt: #0a1317;
-  --fog: #ede8df;
-  --brass: #c5a065;
-  --brass-light: #d8b883;
-  --warm-beige: #eadecd;
-  --warm-beige-foreground: #0d171b;
+  color-scheme: light;
+  --basalt: #132127;
+  --fog: #fbf9f5;
+  --brass: #aa824a;
+  --brass-light: #c29d66;
 
-  --background: #0c1519;
-  --foreground: #ede8df;
-  --card: #122127;
-  --card-foreground: #ede8df;
-  --popover: #122127;
-  --popover-foreground: #ede8df;
-  --primary: #c5a065;
-  --primary-foreground: #0a1317;
-  --secondary: #14232a;
-  --secondary-foreground: #ede8df;
-  --muted: #182830;
-  --muted-foreground: #9cb0b5;
-  --accent: #c5a065;
-  --accent-foreground: #0a1317;
+  --background: #f7f4ee;
+  --foreground: #142228;
+  --card: #ffffff;
+  --card-foreground: #142228;
+  --popover: #ffffff;
+  --popover-foreground: #142228;
+  --primary: #132127;
+  --primary-foreground: #fbf9f5;
+  --secondary: #ede7dc;
+  --secondary-foreground: #142228;
+  --muted: #eae3d6;
+  --muted-foreground: #5a6b70;
+  --accent: #aa824a;
+  --accent-foreground: #fbf9f5;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: rgb(197 160 101 / 0.18);
-  --input: rgb(197 160 101 / 0.25);
+  --border: rgb(20 34 40 / 0.12);
+  --input: rgb(20 34 40 / 0.18);
   --ring: var(--brass);
   --radius: 0.5rem;
 }

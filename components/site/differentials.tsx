@@ -25,7 +25,7 @@ export function Differentials() {
   return (
     <section
       aria-labelledby="diferenciais-title"
-      className="relative overflow-hidden bg-warm-beige py-24 text-warm-beige-foreground md:py-36"
+      className="relative overflow-hidden bg-secondary py-24 text-foreground md:py-36"
     >
       <div data-parallax="-18" className="grain pointer-events-none absolute -inset-y-40 inset-x-0 opacity-[0.04]" aria-hidden="true" />
       <div className="relative mx-auto grid max-w-7xl gap-14 px-5 md:px-8 lg:grid-cols-12">
@@ -33,13 +33,13 @@ export function Differentials() {
           <TextGenerate
             id="diferenciais-title"
             text="Segurança e Clareza em Cada Etapa"
-            className="font-serif text-4xl leading-[1.05] font-medium tracking-tight opacity-0 md:text-6xl text-warm-beige-foreground"
+            className="font-serif text-4xl leading-[1.05] font-medium tracking-tight opacity-0 text-foreground md:text-6xl"
           />
-          <p data-reveal className="max-w-md text-lg leading-relaxed text-warm-beige-foreground/80">
+          <p data-reveal className="max-w-md text-lg leading-relaxed text-muted-foreground">
             Sabemos que buscar ajuda jurídica pode gerar dúvidas. Por isso, nosso compromisso é com a transparência e a
             eficiência.
           </p>
-          <div data-reveal className="relative hidden aspect-[4/3] overflow-hidden rounded-2xl border border-warm-beige-foreground/10 shadow-2xl lg:block">
+          <div data-reveal className="relative hidden aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-card shadow-xl lg:block">
             <div data-parallax="14" className="absolute -inset-y-[15%] inset-x-0">
               <Image
                 src="/images/contract.png"
@@ -61,12 +61,12 @@ export function Differentials() {
                 <li
                   key={item.title}
                   data-reveal
-                  className="flex gap-6 border-t border-warm-beige-foreground/15 py-10 last:border-b"
+                  className="flex gap-6 border-t border-border/80 py-10 last:border-b"
                 >
-                  <Icon className="mt-1 size-6 shrink-0 text-[#9c783e]" aria-hidden="true" />
+                  <Icon className="mt-1 size-6 shrink-0 text-brass" aria-hidden="true" />
                   <div className="flex flex-col gap-3">
-                    <h3 className="font-serif text-3xl font-medium text-warm-beige-foreground">{item.title}</h3>
-                    <p className="text-base leading-relaxed text-warm-beige-foreground/80">{item.text}</p>
+                    <h3 className="font-serif text-3xl font-medium text-foreground">{item.title}</h3>
+                    <p className="text-base leading-relaxed text-muted-foreground">{item.text}</p>
                   </div>
                 </li>
               )
@@ -77,7 +77,7 @@ export function Differentials() {
               href={whatsappLink('Olá, tenho algumas dúvidas e gostaria de conversar com um advogado.')}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-warm-beige-foreground px-7 py-4 text-sm font-semibold text-warm-beige shadow-lg transition-transform duration-300 hover:-translate-y-0.5 hover:bg-warm-beige-foreground/90"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-4 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
             >
               Tire suas dúvidas agora
             </a>

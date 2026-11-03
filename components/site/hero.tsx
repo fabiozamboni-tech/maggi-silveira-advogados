@@ -5,10 +5,9 @@ import Image from 'next/image'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import { ArrowDown, MessageCircle, ShieldCheck, Award } from 'lucide-react'
+import { ArrowDown, ShieldCheck, Award } from 'lucide-react'
 import { TextGenerate } from './text-generate'
 import { Spotlight } from './spotlight'
-import { whatsappLink } from '@/lib/site'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
@@ -113,12 +112,12 @@ export function Hero() {
       <div className="absolute inset-0 z-[1] will-change-transform">
         <div className="hero-media relative h-full w-full">
           <Image
-            src="/images/hero-law-firm.jpg"
-            alt="Gabinete executivo de advocacia com mesa em madeira nobre, livros jurídicos, detalhes em latão e iluminação refinada"
+            src="/images/hero-lawyers.jpg"
+            alt="Equipe de advogados do escritório Maggi & Silveira em gabinete executivo"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[70%_center]"
+            className="object-cover object-[75%_center]"
           />
         </div>
       </div>
@@ -156,19 +155,10 @@ export function Hero() {
             região.
           </p>
 
-          <div data-hero-fade className="flex flex-col gap-3.5 pt-2 sm:flex-row sm:items-center">
-            <a
-              href={whatsappLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 rounded-full bg-brass px-7 py-4 text-sm font-semibold text-basalt shadow-lg shadow-brass/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brass/90 hover:shadow-xl hover:shadow-brass/30"
-            >
-              <MessageCircle className="size-4" aria-hidden="true" />
-              Agendar Consulta via WhatsApp
-            </a>
+          <div data-hero-fade className="pt-2">
             <a
               href="#areas"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/25 bg-basalt/30 px-7 py-4 text-sm font-medium backdrop-blur-sm transition-all duration-300 hover:border-primary-foreground/50 hover:bg-primary-foreground/10"
+              className="inline-flex items-center justify-center gap-2.5 rounded-full bg-brass px-8 py-4 text-sm font-semibold text-basalt shadow-lg shadow-brass/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brass-light hover:shadow-xl hover:shadow-brass/30"
             >
               Conhecer nossas áreas de atuação
               <ArrowDown className="size-4" aria-hidden="true" />
