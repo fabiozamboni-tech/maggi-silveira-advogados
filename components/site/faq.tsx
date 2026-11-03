@@ -31,12 +31,12 @@ export function Faq() {
             className="font-serif text-4xl leading-[1.05] font-medium tracking-tight opacity-0 md:text-6xl"
           />
         </div>
-        <div className="flex flex-col border-t lg:col-span-7 lg:col-start-6">
+        <div className="flex flex-col border-t border-border lg:col-span-7 lg:col-start-6">
           {QUESTIONS.map((item) => (
-            <details key={item.q} data-reveal className="group border-b">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-left font-serif text-xl font-medium md:text-2xl [&::-webkit-details-marker]:hidden">
+            <details key={item.q} data-reveal className="group border-b border-border">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-left font-serif text-xl font-medium text-foreground transition-colors hover:text-brass md:text-2xl [&::-webkit-details-marker]:hidden">
                 {item.q}
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-full border transition-transform duration-300 group-open:rotate-45 group-open:border-brass group-open:text-brass">
+                <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-border transition-transform duration-300 group-open:rotate-45 group-open:border-brass group-open:text-brass">
                   <Plus className="size-4" aria-hidden="true" />
                 </span>
               </summary>

@@ -1,6 +1,6 @@
-import { MapPin, MessageCircle } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 import { TextGenerate } from './text-generate'
-import { MAPS_LINK, whatsappLink } from '@/lib/site'
+import { MAPS_LINK } from '@/lib/site'
 
 const COMMITMENTS = [
   {
@@ -56,29 +56,6 @@ export function Trust() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div
-          data-reveal
-          className="mt-20 flex flex-col items-start justify-between gap-8 rounded-2xl bg-primary p-8 text-primary-foreground md:mt-28 md:flex-row md:items-center md:p-12"
-        >
-          <div className="flex max-w-2xl flex-col gap-3">
-            <h3 className="font-serif text-3xl leading-tight font-medium text-balance md:text-4xl">
-              Tem um contrato, imóvel ou benefício para resolver?
-            </h3>
-            <p className="text-base leading-relaxed text-primary-foreground/75">
-              Conte brevemente o seu caso. Um advogado do escritório retorna para orientar os próximos passos.
-            </p>
-          </div>
-          <a
-            href={whatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-brass px-7 py-4 text-sm font-semibold text-basalt transition-transform duration-300 hover:-translate-y-0.5"
-          >
-            <MessageCircle className="size-4" aria-hidden="true" />
-            Agendar Consulta
-          </a>
         </div>
       </div>
     </section>

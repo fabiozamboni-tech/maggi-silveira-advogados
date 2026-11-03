@@ -9,8 +9,11 @@
   --font-serif: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
 
   --color-brass: var(--brass);
+  --color-brass-light: var(--brass-light);
   --color-basalt: var(--basalt);
   --color-fog: var(--fog);
+  --color-warm-beige: var(--warm-beige);
+  --color-warm-beige-foreground: var(--warm-beige-foreground);
 
   --color-ring: var(--ring);
   --color-input: var(--input);
@@ -39,30 +42,33 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* Paleta: basalto das falésias de Torres, névoa do mar, pedra e latão envelhecido */
+/* Paleta refinada: Basalto executivo nobre, dourado latão e bege champanhe clássico */
 :root {
-  color-scheme: light;
-  --basalt: #14242a;
-  --fog: #edf0ee;
-  --brass: #b08a55;
+  color-scheme: dark;
+  --basalt: #0a1317;
+  --fog: #ede8df;
+  --brass: #c5a065;
+  --brass-light: #d8b883;
+  --warm-beige: #eadecd;
+  --warm-beige-foreground: #0d171b;
 
-  --background: var(--fog);
-  --foreground: var(--basalt);
-  --card: #f8f9f8;
-  --card-foreground: var(--basalt);
-  --popover: #f8f9f8;
-  --popover-foreground: var(--basalt);
-  --primary: var(--basalt);
-  --primary-foreground: var(--fog);
-  --secondary: #e2e7e5;
-  --secondary-foreground: var(--basalt);
-  --muted: #e2e7e5;
-  --muted-foreground: #586765;
-  --accent: var(--brass);
-  --accent-foreground: var(--basalt);
+  --background: #0c1519;
+  --foreground: #ede8df;
+  --card: #122127;
+  --card-foreground: #ede8df;
+  --popover: #122127;
+  --popover-foreground: #ede8df;
+  --primary: #c5a065;
+  --primary-foreground: #0a1317;
+  --secondary: #14232a;
+  --secondary-foreground: #ede8df;
+  --muted: #182830;
+  --muted-foreground: #9cb0b5;
+  --accent: #c5a065;
+  --accent-foreground: #0a1317;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: rgb(20 36 42 / 0.12);
-  --input: rgb(20 36 42 / 0.2);
+  --border: rgb(197 160 101 / 0.18);
+  --input: rgb(197 160 101 / 0.25);
   --ring: var(--brass);
   --radius: 0.5rem;
 }

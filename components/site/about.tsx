@@ -33,10 +33,10 @@ export function About() {
           </div>
           <div
             data-reveal
-            className="relative -mt-16 ml-auto mr-4 max-w-xs rounded-xl border border-primary-foreground/10 bg-primary p-6 text-primary-foreground shadow-2xl shadow-basalt/20 md:-mt-24 md:mr-[-2rem]"
+            className="relative -mt-16 ml-auto mr-4 max-w-xs rounded-xl border border-brass/35 bg-[#122127] p-6 text-foreground shadow-2xl shadow-black/50 md:-mt-24 md:mr-[-2rem]"
           >
             <p className="font-serif text-xl leading-snug">
-              No coração de Torres/RS, atendendo o Litoral Norte e a Serra Gaúcha.
+              <span className="text-brass">No coração de Torres/RS</span>, atendendo o Litoral Norte e a Serra Gaúcha.
             </p>
           </div>
         </div>
@@ -59,9 +59,9 @@ export function About() {
               entregas e transparência em todas as etapas do processo.
             </p>
           </div>
-          <ul className="flex flex-col border-t">
+          <ul className="flex flex-col border-t border-border">
             {DIFFERENTIALS.map((item) => (
-              <li data-reveal key={item} className="flex items-center gap-4 border-b py-4 text-base font-medium">
+              <li data-reveal key={item} className="flex items-center gap-4 border-b border-border py-4 text-base font-medium">
                 <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-brass/15 text-brass">
                   <Check className="size-4" aria-hidden="true" />
                 </span>

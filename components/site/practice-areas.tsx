@@ -65,18 +65,18 @@ export function PracticeAreas() {
             const Icon = area.icon
             return (
               <li key={area.title} data-reveal className="h-full">
-                <article className="group flex h-full flex-col gap-6 rounded-2xl border border-border bg-card p-7 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1.5 hover:border-brass/50 hover:shadow-[0_30px_60px_-30px_rgb(20_36_42/0.35)] md:p-8">
-                  <span className="flex size-14 items-center justify-center rounded-full bg-primary text-brass transition-transform duration-500 group-hover:rotate-[-8deg]">
+                <article className="group flex h-full flex-col gap-6 rounded-2xl border border-border bg-card p-7 transition-[transform,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1.5 hover:border-brass/50 hover:shadow-[0_20px_50px_-20px_rgb(197_160_101/0.18)] md:p-8">
+                  <span className="flex size-14 items-center justify-center rounded-full bg-brass/15 text-brass transition-transform duration-500 group-hover:rotate-[-8deg] group-hover:bg-brass/25">
                     <Icon className="size-6" aria-hidden="true" />
                   </span>
-                  <h3 className="font-serif text-3xl leading-tight font-medium">{area.title}</h3>
-                  <p className="text-base leading-relaxed font-medium text-foreground">{area.benefit}</p>
+                  <h3 className="font-serif text-3xl leading-tight font-medium text-foreground">{area.title}</h3>
+                  <p className="text-base leading-relaxed font-medium text-brass/90">{area.benefit}</p>
                   <p className="text-sm leading-relaxed text-muted-foreground">{area.description}</p>
                   <a
                     href={whatsappLink(area.message)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto inline-flex items-center gap-2 border-t pt-5 text-sm font-semibold transition-colors group-hover:text-brass"
+                    className="mt-auto inline-flex items-center gap-2 border-t border-border pt-5 text-sm font-semibold transition-colors group-hover:text-brass"
                   >
                     {area.link}
                     <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />

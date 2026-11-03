@@ -17,8 +17,8 @@ export function Contact() {
             Estamos prontos para analisar o seu caso e oferecer a melhor orientação jurídica.
           </p>
 
-          <ul data-reveal className="flex flex-col border-t">
-            <li className="flex gap-4 border-b py-5">
+          <ul data-reveal className="flex flex-col border-t border-border">
+            <li className="flex gap-4 border-b border-border py-5">
               <MapPin className="mt-0.5 size-5 shrink-0 text-brass" aria-hidden="true" />
               <div className="flex flex-col gap-1">
                 <span className="text-xs tracking-[0.2em] text-muted-foreground uppercase">Endereço</span>
@@ -37,7 +37,7 @@ export function Contact() {
                 </a>
               </div>
             </li>
-            <li className="flex gap-4 border-b py-5">
+            <li className="flex gap-4 border-b border-border py-5">
               <Phone className="mt-0.5 size-5 shrink-0 text-brass" aria-hidden="true" />
               <div className="flex flex-col gap-1">
                 <span className="text-xs tracking-[0.2em] text-muted-foreground uppercase">Telefone / WhatsApp</span>
@@ -46,7 +46,7 @@ export function Contact() {
                 </a>
               </div>
             </li>
-            <li className="flex gap-4 border-b py-5">
+            <li className="flex gap-4 border-b border-border py-5">
               <Clock className="mt-0.5 size-5 shrink-0 text-brass" aria-hidden="true" />
               <div className="flex flex-col gap-1">
                 <span className="text-xs tracking-[0.2em] text-muted-foreground uppercase">Atendimento</span>

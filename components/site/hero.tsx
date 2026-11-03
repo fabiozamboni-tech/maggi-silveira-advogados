@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import { ArrowDown, MessageCircle, ShieldCheck, Scale, Award } from 'lucide-react'
+import { ArrowDown, MessageCircle, ShieldCheck, Award } from 'lucide-react'
 import { TextGenerate } from './text-generate'
 import { Spotlight } from './spotlight'
 import { whatsappLink } from '@/lib/site'
@@ -142,28 +142,18 @@ export function Hero() {
       {/* Hero Central Content */}
       <div className="hero-content relative z-[5] mx-auto flex h-full max-w-7xl flex-col justify-center px-5 pt-20 pb-20 md:px-8">
         <div className="flex max-w-3xl flex-col gap-7">
-          <div data-hero-fade className="inline-flex items-center gap-2 self-start rounded-full border border-brass/40 bg-basalt/60 px-4 py-1.5 text-xs font-medium tracking-wide text-brass backdrop-blur-md">
-            <Scale className="size-3.5" aria-hidden="true" />
-            <span>Advocacia Estratégica &amp; Consultoria Jurídica</span>
-          </div>
-
           <TextGenerate
             id="hero-title"
             as="h1"
             immediate
             delay={0.2}
-            text="Segurança Jurídica com Agilidade e Proximidade no Litoral Norte."
+            text="Segurança Jurídica com Agilidade e Segurança."
             className="font-serif text-[2.6rem] leading-[1.05] font-medium tracking-tight opacity-0 sm:text-6xl lg:text-[5.1rem]"
           />
 
           <p data-hero-fade className="max-w-xl text-pretty text-lg leading-relaxed text-primary-foreground/90 md:text-xl">
             Assessoria especializada em Direito Cível, Imobiliário e Previdenciário para pessoas e empresas em Torres e
             região.
-          </p>
-
-          <p data-hero-fade className="flex items-center gap-3 text-sm text-primary-foreground/75">
-            <span className="h-px w-10 bg-brass" aria-hidden="true" />
-            Atendimento humanizado e rigor técnico para proteger seus direitos e investimentos.
           </p>
 
           <div data-hero-fade className="flex flex-col gap-3.5 pt-2 sm:flex-row sm:items-center">

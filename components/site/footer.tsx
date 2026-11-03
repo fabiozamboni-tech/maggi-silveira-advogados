@@ -4,14 +4,14 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-[#070e11] text-[#ede8df] border-t border-brass/15">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-12 md:px-8 md:py-20">
         <div className="flex flex-col gap-4 md:col-span-5">
           <p className="font-serif text-3xl font-medium">
             Maggi <span className="text-brass">&amp;</span> Silveira
           </p>
-          <p className="text-xs tracking-[0.28em] text-primary-foreground/60 uppercase">Advogados Associados</p>
-          <p className="max-w-sm text-sm leading-relaxed text-primary-foreground/70">
+          <p className="text-xs tracking-[0.28em] text-[#ede8df]/60 uppercase">Advogados Associados</p>
+          <p className="max-w-sm text-sm leading-relaxed text-[#ede8df]/70">
             Direito Cível, Imobiliário e Previdenciário em Torres/RS, para o Litoral Norte e a Serra Gaúcha.
           </p>
         </div>
@@ -20,7 +20,7 @@ export function Footer() {
           <ul className="flex flex-col gap-3 text-sm">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="text-primary-foreground/75 transition-colors hover:text-brass">
+                <a href={link.href} className="text-[#ede8df]/75 transition-colors hover:text-brass">
                   {link.label}
                 </a>
               </li>
@@ -29,7 +29,7 @@ export function Footer() {
         </nav>
 
         <div className="flex flex-col gap-3 text-sm md:col-span-4">
-          <address className="not-italic leading-relaxed text-primary-foreground/75">
+          <address className="not-italic leading-relaxed text-[#ede8df]/75">
             {SITE.address}
             <br />
             {SITE.city}, {SITE.zip}
@@ -41,15 +41,15 @@ export function Footer() {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-fit text-primary-foreground/75 underline decoration-brass underline-offset-4 hover:text-brass"
+            className="w-fit text-[#ede8df]/75 underline decoration-brass underline-offset-4 hover:text-brass"
           >
             WhatsApp
           </a>
         </div>
       </div>
 
-      <div className="border-t border-primary-foreground/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-xs leading-relaxed text-primary-foreground/60 md:px-8">
+      <div className="border-t border-[#ede8df]/10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-xs leading-relaxed text-[#ede8df]/60 md:px-8">
           <details id="privacidade" className="group">
             <summary className="w-fit cursor-pointer list-none underline underline-offset-4 hover:text-brass [&::-webkit-details-marker]:hidden">
               Aviso de privacidade (LGPD)

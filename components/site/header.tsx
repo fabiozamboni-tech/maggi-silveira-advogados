@@ -55,12 +55,7 @@ export function Header() {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className={cn(
-              'hidden rounded-full px-5 py-2.5 text-sm font-semibold transition-colors sm:inline-flex',
-              isSolid
-                ? 'bg-primary text-primary-foreground hover:bg-primary/90'
-                : 'bg-primary-foreground text-primary hover:bg-primary-foreground/90',
-            )}
+            className="hidden rounded-full bg-brass px-5 py-2.5 text-sm font-semibold text-basalt shadow-md transition-all hover:bg-brass/90 hover:shadow-brass/20 sm:inline-flex"
           >
             Falar com um Advogado
           </a>
@@ -109,7 +104,7 @@ export function Header() {
               href={whatsappLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full items-center justify-center rounded-full bg-primary px-5 py-3.5 text-sm font-semibold text-primary-foreground"
+              className="flex w-full items-center justify-center rounded-full bg-brass px-5 py-3.5 text-sm font-semibold text-basalt shadow-md hover:bg-brass/90"
             >
               Falar com um Advogado
             </a>

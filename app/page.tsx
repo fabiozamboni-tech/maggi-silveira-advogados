@@ -5,7 +5,6 @@ import { About } from '@/components/site/about'
 import { IrisInterstitial } from '@/components/site/iris-interstitial'
 import { PracticeAreas } from '@/components/site/practice-areas'
 import { Differentials } from '@/components/site/differentials'
-import { Process } from '@/components/site/process'
 import { Trust } from '@/components/site/trust'
 import { Faq } from '@/components/site/faq'
 import { Contact } from '@/components/site/contact'
@@ -31,7 +30,6 @@ export default function Page() {
         <IrisInterstitial />
         <PracticeAreas />
         <Differentials />
-        <Process />
         <Trust />
         <Faq />
         <Contact />

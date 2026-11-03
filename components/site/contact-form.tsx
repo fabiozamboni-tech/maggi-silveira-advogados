@@ -151,7 +151,7 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-7 py-4 text-sm font-semibold text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
+        className="inline-flex items-center justify-center gap-2.5 rounded-full bg-brass px-7 py-4 text-sm font-semibold text-basalt shadow-lg shadow-brass/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brass/90 hover:shadow-xl hover:shadow-brass/30"
       >
         <Send className="size-4" aria-hidden="true" />
         Enviar pelo WhatsApp

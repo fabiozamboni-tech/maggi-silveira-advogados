@@ -35,7 +35,7 @@ export function CookieNotice() {
       <button
         type="button"
         onClick={accept}
-        className="shrink-0 rounded-full bg-primary px-5 py-2.5 font-semibold text-primary-foreground"
+        className="shrink-0 rounded-full bg-brass px-5 py-2.5 font-semibold text-basalt shadow-sm hover:bg-brass/90"
       >
         Entendi
       </button>
