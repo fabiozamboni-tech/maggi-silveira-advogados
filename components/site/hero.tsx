@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import { ArrowDown, MessageCircle } from 'lucide-react'
+import { ArrowDown, MessageCircle, ShieldCheck, Scale, Award } from 'lucide-react'
 import { TextGenerate } from './text-generate'
 import { Spotlight } from './spotlight'
 import { whatsappLink } from '@/lib/site'
@@ -20,34 +20,79 @@ export function Hero() {
       const mm = gsap.matchMedia()
 
       mm.add('(prefers-reduced-motion: no-preference)', () => {
+        // Entrance animation
         gsap.fromTo(
           '[data-hero-fade]',
           { opacity: 0, y: 24 },
-          { opacity: 1, y: 0, duration: 1, ease: 'power3.out', stagger: 0.14, delay: 0.9 },
+          { opacity: 1, y: 0, duration: 1, ease: 'power3.out', stagger: 0.12, delay: 0.8 },
         )
-        gsap.fromTo('.hero-media', { scale: 1.12 }, { scale: 1, duration: 2.4, ease: 'power2.out' })
+        gsap.fromTo('.hero-media', { scale: 1.08 }, { scale: 1, duration: 2.4, ease: 'power2.out' })
 
-        gsap.to('.mist-a', { xPercent: 8, duration: 16, ease: 'sine.inOut', yoyo: true, repeat: -1 })
-        gsap.to('.mist-b', { xPercent: -10, duration: 22, ease: 'sine.inOut', yoyo: true, repeat: -1 })
-
+        // Scroll timeline: cinematic depth & smooth elevation
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: root.current,
             start: 'top top',
-            end: '+=130%',
+            end: '+=100%',
             pin: true,
             scrub: 1,
             anticipatePin: 1,
           },
         })
 
-        tl.to('.hero-zoom', { scale: 2.5, ease: 'none', force3D: true }, 0)
-          .to('.hero-content', { yPercent: -30, opacity: 0, filter: 'blur(8px)', ease: 'power1.in' }, 0)
-          .to('.hero-outline', { xPercent: -18, ease: 'none' }, 0)
-          .to('.hero-texture', { yPercent: 12, ease: 'none' }, 0)
-          .to('.mist-layer-a', { yPercent: -25, opacity: 0.9, ease: 'none' }, 0)
-          .to('.mist-layer-b', { yPercent: -55, opacity: 1, ease: 'none' }, 0)
-          .to('.hero-veil', { opacity: 1, ease: 'power2.in' }, 0.55)
+        tl.to(
+          '.hero-media',
+          {
+            scale: 1.15,
+            yPercent: 6,
+            ease: 'none',
+            force3D: true,
+          },
+          0,
+        )
+          .to(
+            '.hero-content',
+            {
+              yPercent: -22,
+              opacity: 0,
+              ease: 'power2.in',
+            },
+            0,
+          )
+          .to(
+            '.hero-outline',
+            {
+              xPercent: -12,
+              opacity: 0,
+              ease: 'none',
+            },
+            0,
+          )
+          .to(
+            '.hero-trust-bar',
+            {
+              yPercent: 30,
+              opacity: 0,
+              ease: 'power2.in',
+            },
+            0,
+          )
+          .to(
+            '.hero-overlay',
+            {
+              backgroundColor: 'rgba(20, 36, 42, 0.85)',
+              ease: 'none',
+            },
+            0,
+          )
+          .to(
+            '.hero-veil',
+            {
+              opacity: 1,
+              ease: 'power1.inOut',
+            },
+            0.5,
+          )
       })
 
       return () => mm.revert()
@@ -60,79 +105,80 @@ export function Hero() {
       id="inicio"
       ref={root}
       aria-labelledby="hero-title"
-      className="relative h-svh min-h-[640px] w-full overflow-hidden bg-basalt text-primary-foreground"
+      className="relative h-svh min-h-[680px] w-full overflow-hidden bg-basalt text-primary-foreground"
     >
-      <div className="hero-texture grain pointer-events-none absolute -inset-y-20 inset-x-0 z-0 opacity-[0.07]" aria-hidden="true" />
+      <div className="hero-texture grain pointer-events-none absolute -inset-y-20 inset-x-0 z-0 opacity-[0.06]" aria-hidden="true" />
 
-      <div className="hero-zoom absolute inset-0 z-[1] origin-[68%_46%] will-change-transform">
-        <div className="hero-media absolute inset-0">
+      {/* Background Law Firm Image with smooth Parallax Depth */}
+      <div className="absolute inset-0 z-[1] will-change-transform">
+        <div className="hero-media relative h-full w-full">
           <Image
-            src="/images/hero.png"
-            alt="Sala do escritório com mesa de madeira, livros jurídicos e janela voltada para as falésias de basalto do litoral de Torres"
+            src="/images/hero-law-firm.jpg"
+            alt="Gabinete executivo de advocacia com mesa em madeira nobre, livros jurídicos, detalhes em latão e iluminação refinada"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[60%_center]"
+            className="object-cover object-[70%_center]"
           />
         </div>
       </div>
 
+      {/* Refined gradient overlay for legal authority & crystal text contrast */}
       <div
-        className="absolute inset-0 z-[2] bg-[linear-gradient(90deg,rgb(20_36_42/0.92)_0%,rgb(20_36_42/0.7)_42%,rgb(20_36_42/0.15)_100%)] max-md:bg-basalt/70"
+        className="hero-overlay absolute inset-0 z-[2] bg-[linear-gradient(90deg,rgb(20_36_42/0.95)_0%,rgb(20_36_42/0.82)_45%,rgb(20_36_42/0.3)_100%)] transition-colors duration-500 max-md:bg-basalt/85"
         aria-hidden="true"
       />
 
       <Spotlight className="-left-10 -top-40 md:-left-32 md:-top-20" />
 
-      <div className="mist-layer-a pointer-events-none absolute inset-x-[-10%] bottom-[-10%] z-[3] h-[70%] opacity-40 mix-blend-screen" aria-hidden="true">
-        <div className="mist-a relative h-full w-full">
-          <Image src="/images/mist.png" alt="" fill sizes="120vw" className="object-cover" />
-        </div>
-      </div>
-      <div className="mist-layer-b pointer-events-none absolute inset-x-[-15%] bottom-[-35%] z-[4] h-[80%] opacity-25 mix-blend-screen" aria-hidden="true">
-        <div className="mist-b relative h-full w-full">
-          <Image src="/images/mist.png" alt="" fill sizes="130vw" className="scale-x-[-1] object-cover" />
-        </div>
-      </div>
-
+      {/* Architectural typographic watermark */}
       <p
         aria-hidden="true"
-        className="hero-outline pointer-events-none absolute bottom-[6%] left-[4%] z-[5] whitespace-nowrap font-serif text-[22vw] leading-none italic text-primary-foreground/[0.06] md:text-[15vw]"
+        className="hero-outline pointer-events-none absolute bottom-[8%] left-[3%] z-[3] select-none whitespace-nowrap font-serif text-[18vw] leading-none italic text-primary-foreground/[0.04] transition-opacity md:text-[13vw]"
       >
-        Litoral Norte
+        Maggi &amp; Silveira
       </p>
 
-      <div className="hero-content relative z-[6] mx-auto flex h-full max-w-7xl flex-col justify-center px-5 pt-24 pb-16 md:px-8">
+      {/* Hero Central Content */}
+      <div className="hero-content relative z-[5] mx-auto flex h-full max-w-7xl flex-col justify-center px-5 pt-20 pb-20 md:px-8">
         <div className="flex max-w-3xl flex-col gap-7">
+          <div data-hero-fade className="inline-flex items-center gap-2 self-start rounded-full border border-brass/40 bg-basalt/60 px-4 py-1.5 text-xs font-medium tracking-wide text-brass backdrop-blur-md">
+            <Scale className="size-3.5" aria-hidden="true" />
+            <span>Advocacia Estratégica &amp; Consultoria Jurídica</span>
+          </div>
+
           <TextGenerate
             id="hero-title"
             as="h1"
             immediate
-            delay={0.25}
+            delay={0.2}
             text="Segurança Jurídica com Agilidade e Proximidade no Litoral Norte."
-            className="font-serif text-[2.6rem] leading-[1.05] font-medium tracking-tight opacity-0 sm:text-6xl lg:text-[5.2rem]"
+            className="font-serif text-[2.6rem] leading-[1.05] font-medium tracking-tight opacity-0 sm:text-6xl lg:text-[5.1rem]"
           />
-          <p data-hero-fade className="max-w-xl text-pretty text-lg leading-relaxed text-primary-foreground/85 md:text-xl">
+
+          <p data-hero-fade className="max-w-xl text-pretty text-lg leading-relaxed text-primary-foreground/90 md:text-xl">
             Assessoria especializada em Direito Cível, Imobiliário e Previdenciário para pessoas e empresas em Torres e
             região.
           </p>
-          <p data-hero-fade className="flex items-center gap-3 text-sm text-primary-foreground/70">
+
+          <p data-hero-fade className="flex items-center gap-3 text-sm text-primary-foreground/75">
             <span className="h-px w-10 bg-brass" aria-hidden="true" />
             Atendimento humanizado e rigor técnico para proteger seus direitos e investimentos.
           </p>
-          <div data-hero-fade className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center">
+
+          <div data-hero-fade className="flex flex-col gap-3.5 pt-2 sm:flex-row sm:items-center">
             <a
               href={whatsappLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 rounded-full bg-brass px-7 py-4 text-sm font-semibold text-basalt transition-transform duration-300 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2.5 rounded-full bg-brass px-7 py-4 text-sm font-semibold text-basalt shadow-lg shadow-brass/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-brass/90 hover:shadow-xl hover:shadow-brass/30"
             >
               <MessageCircle className="size-4" aria-hidden="true" />
               Agendar Consulta via WhatsApp
             </a>
             <a
               href="#areas"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/30 px-7 py-4 text-sm font-medium transition-colors hover:bg-primary-foreground/10"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/25 bg-basalt/30 px-7 py-4 text-sm font-medium backdrop-blur-sm transition-all duration-300 hover:border-primary-foreground/50 hover:bg-primary-foreground/10"
             >
               Conhecer nossas áreas de atuação
               <ArrowDown className="size-4" aria-hidden="true" />
@@ -141,6 +187,32 @@ export function Hero() {
         </div>
       </div>
 
+      {/* Bottom Institutional Trust Indicators */}
+      <div className="hero-trust-bar absolute bottom-6 inset-x-0 z-[5] hidden md:block">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-8 text-xs text-primary-foreground/60">
+          <div className="flex items-center gap-6">
+            <span className="flex items-center gap-1.5">
+              <ShieldCheck className="size-4 text-brass" aria-hidden="true" />
+              Sigilo Absoluto &amp; Rigor Ético
+            </span>
+            <span className="h-3 w-px bg-primary-foreground/20" aria-hidden="true" />
+            <span className="flex items-center gap-1.5">
+              <Award className="size-4 text-brass" aria-hidden="true" />
+              Atuação em Torres, Litoral Norte e Serra Gaúcha
+            </span>
+          </div>
+
+          <a
+            href="#sobre"
+            className="group flex items-center gap-2 text-primary-foreground/50 transition-colors hover:text-brass"
+          >
+            <span>Role para conhecer</span>
+            <ArrowDown className="size-3.5 transition-transform duration-300 group-hover:translate-y-0.5" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+
+      {/* Smooth transition veil into next section */}
       <div className="hero-veil pointer-events-none absolute inset-0 z-[7] bg-background opacity-0" aria-hidden="true" />
     </section>
   )
